@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tripify-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_APIKEY
+        sync: false
+      - key: VITE_AUTHDOMAIN
+        sync: false
+      - key: VITE_PROJECTID
+        sync: false
+      - key: VITE_STORAGEBUCKET
+        sync: false
+      - key: VITE_MESSAGINGSENDERID
+        sync: false
+      - key: VITE_APPID
+        sync: false
