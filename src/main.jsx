@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 import Root from "./Layout/Root";
 import Error from "./Pages/Error/Error";
@@ -90,6 +91,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthProvider>
       <HelmetProvider>
         <RouterProvider router={router} />
+        <Analytics />
       </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>
